@@ -9,6 +9,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/availability-calendar.css" rel="stylesheet" type="text/css">
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -25,7 +26,7 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-dark btn-med pull-right toggle" style="background-color: rgb(34, 34, 34);"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick=$( "#menu-close" ).click();>Summer Breeze 201</a>
+                <a href="#top" onclick=$( "#menu-close" ).click();>La Iguana 4</a>
             </li>
             <li>
                 <a href="#top" onclick=$( "#menu-close" ).click();>Home</a>
@@ -38,6 +39,9 @@
             </li>
             <li>
                 <a href="#gallery" onclick=$( "#menu-close" ).click();>Gallery</a>
+            </li>
+            <li>
+                <a href="#availability" onclick=$( "#menu-close" ).click();>Availability &amp; Rates</a>
             </li>
             <li>
                 <a href="#contact" onclick=$( "#menu-close" ).click();>Contact</a>
@@ -80,7 +84,9 @@
     <!-- Amenities -->
     <section id="amenities" class="portfolio">
         <div class="container">
-            <h2>Amenities</h2>
+            <div class="text-center">
+                <h2>Amenities</h2>
+            </div>
             <hr class="small">
             <button class="accordion">Household</button>
             <div class="panel">
@@ -213,6 +219,20 @@
             <!-- /.row -->
         </div>
         <!-- /.container -->
+    </section>
+
+    <section id="availability" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class=" text-center">
+                        <h2>Availability</h2>
+                        <hr class="small">
+                    </div>
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Map -->
@@ -358,6 +378,18 @@
 
             });
         }
+    </script>
+
+    <script src="js/availability-calendar.js"></script>
+    <script>
+        var unavailableDates = [
+            { start: '2018-05-01', end: '2018-05-05' },
+            { start: '2015-09-11', end: '2015-09-15' },
+            { start: '2015-09-15', end: '2015-09-23' },
+            { start: '2015-10-01', end: '2015-10-07' }
+        ];
+
+        $('#calendar').availabilityCalendar(unavailableDates);
     </script>
 </body>
 </html>
