@@ -8,6 +8,7 @@
     <title>La Iguana #4</title>
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -78,27 +79,91 @@
 
     <!-- Amenities -->
     <section id="amenities" class="portfolio">
-        <div class="container text-center">
+        <div class="container">
             <h2>Amenities</h2>
             <hr class="small">
-            <button class="accordion">Living Room</button>
+            <button class="accordion">Household</button>
             <div class="panel">
-                <p>Lorem ipsum...</p>
+                <div class="row padded-row">
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Washing-Machine" width="25" height="25" src="data:image/png;base64,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">
+                        &emsp;Beach View
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Heating-Room" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIlSURBVEhLtdVPiA5xHMfxZ9n1Jzb5Hwc52NoclD/Fxb+SP+WyykFu5LK1e0Apq1yUkig5KFwUSTkpDpQ/BznIKpSSIoptSYS2TXi/57ezzczzmyfP0/jUq+c30+585/f9/Wam1mRm4VEY/r8swtswrDaT8BqrkC2yGzfCsJpswxB2wCIWeIdutJSZ6AvDXLbiG0YQK9CGgTAsz8Sx3xn4isnJUT49+I7YDJbhZRgmmTD2O54teAUvYh5ifRjm0mjh9+Ms2tEL27sQuWzAU9zBNRxDMY2K3IRFXuAWliIa7+IofuM55iCbsiJL8AM/sdMTsUzFcQziM67jIj7CqVvcFItMx0nYmtO4DTfHfdRtHov0YzXSDWCcslO3BZuRFnFR9+A9vJl5SDMFm7A3OWoi2+HGuIsveIJ7WI5KY98/4A8eoxOVxVYewSecgf23RbbKltU9D2WZjctwkbs8QXyCd+ENrsD1yC68rbJ9tm6NJ4gFV+IQznkiGxfbrXcBXsQL+8+2Jb2AiW3h9EYewNk+wylsRDTzYSt+wW1YbEWsiLGlFvBZ8f3lcV06cAD2+wTOwykXU1bEXMVh2Fpn5gxzWQv/yB1knPKKMMylUZF9uBSGSYt9MOcmR5HYsmHEdo2zG4Xfl2IWw0/AP8Undl0Y5nIQPie+Nmyr35difCu0HAv4rbANtstPcVmhlmLbfPUvQHZNLOTDWXkaLXxlmQY/TE2kVvsLT8hz6eRd56QAAAAASUVORK5CYII=">
+                        &emsp;Air Conditioning
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="icon icons8-TV" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAlElEQVRIS2NkoANgpIMdDMPTkgMMDAz/qRx8jiDzkIOL2hbAzcdmSSEDA8MFCnxkwMDA0A/VDzYfmyUgL4KCjlzgwMDAsH/UEmKDbzS4iA0psLoRFlwFVMjxEwhlRpIigIBijGKFkqIEl12gRIC30gIVdPwkeOsjrmDGVzOCfGZPgiUHockXQ8uAW0KCJ/ArHT4NCQAm7Cwa6xE9GwAAAABJRU5ErkJggg==">
+                        &emsp;Television
+                    </div>
+                </div>
             </div>
 
             <button class="accordion">Kitchen</button>
             <div class="panel">
-                <p>Lorem ipsum...</p>
+                <div class="row padded-row">
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Dishwasher" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABI0lEQVRIS92V0U3DQBAFJx3QQaADOiAlhAqACkgHJB3QAaED6AAqgBKgg6SCRCPdSmtEJHtl5cP349iO3+y+fWfPOMOanYHBtCGHESzsOPSfXUI+gY8CbAHcQHcMpyAbYH0Ccg08Ag/AG7AClsAOuASexoBYbQgH5L5BLoZAtKpql0X0mklhHJ1HekFegW2BpG13fTuJwf+Ns6nTDpf3voFb4KddMyyDB5/jbJWKZYjapiqSVoZEVxGEDPlNXV212A/uxCq/2sPG9R2wo7ArNm0IlzpR8KWJ7ptVziFDPHdzmqgSRLHnJuKA7SaW87JTlx2560sQ5zBvrwsrVszdHp141ELFvV+G5O2iUEAsIJ/7v0GQabxWsj2j/J72N34Ui7LIEZZiYRrZOSSTAAAAAElFTkSuQmCC">
+                        &emsp;Dishwasher
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Coffee-Maker" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABQklEQVRIS82VjTEEQRCFv4uADJCBDBCCCMgAEZABGSADIkAEXATIQAjqU93sXc2u2Tm1p6uu7me7+02/fvNuxgQxmwCDtYJsAufA7gqTHmRt3ySPwB7w1ADiwTbgh6USiEnPwBlw1QCSB/zuXQLZBx4Ax7VgbFSBuI834BU4rUSYAx+RWwVi7nFQJbc10Z26GsTG26Eup1EEtzFhF9ScoyVqR4Fks4uQc2lHpf01gdjI101hkj8DGdrJ/wVRvtdBj5+HwjvWNIm8q5Z3YKvHVlSUz5pBVIZ34z4UVXKEVNsyiHZkvVak5HttxYSTuL3SNQbEWg+Q92rQu0z0xkvJTkG2SWkzXbnodOI74LCzfX/XPKXTgzQt3n42uoz3NEsN07Cp8dKh1Pz8nvULVA9ZfY0x/ibxr+dr/Y9fdYqF+kkm+QT3wVEaQrEnVAAAAABJRU5ErkJggg==">
+                        &emsp;Coffee Maker
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Microwave" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABCElEQVRIS92W4RHBQBSENxWgEyqgBB1Qgg5IB3SgBDqgAzrQAR3EfJn3TOaQCZeLGW/m5n4keXvZ3bdJpg4q6wBD/wWykrRMSFsOXYWkgaRbAqC+pKuDsE8kjVsAyoMeRRUE2gA6RABBe2imJxD6A/ZtQT0gJ5NhxB6+SZsg9BrWgSDYTNLUKOSBna29mcQ1nEvaSFrb6RvTdTFtaIxGOA9AGtK8J+ls17ZGDwdxurjXD5aMLsCoUo53msTS1ehNYumqujMZXb+3MLESM/EMcq2FsSYrtsLEeGiSPIU7+Z44PYC5Jq+4bUIjQ+hpfvSwrYrEAC6sExYkUj4thpBQpMiy8kP4Pz8Sd2O8aQtw6rnHAAAAAElFTkSuQmCC">
+                        &emsp;Microwave
+                    </div>
+                </div>
+
+                <div class="row padded-row">
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Toaster-Oven" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAA6ElEQVRIS92VQRHCMBBFXxWAA8ABEpCABCSAgrYKAAdIqAQk4ABwUBTA/E7DhBwCmaSdIXtpD9l9+bs/ScEIUYzAIC/IFpgM2LZW7XoC9YCQ0kD0TaGoBY7Aut90IxE2JIWiEjozqZai+3chsW5TcdXwKvkriLdd6uMOuAS6bQnsrTl8HfwUkEtCwuSYwXshC+AMzEIIwB1YAdfs3GU3YrBz4oVUgbNwlyvfPWsfSnR3ySUxIVcenAJvSKwC38YqSRNZvpZ1ZcNTjJQ+d2PVawRRi279w6V3JYUq1dDBfADz2AvxJ9H5QF7yvlAa6rc8MQAAAABJRU5ErkJggg==">
+                        &emsp;Toaster Oven
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Blender" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABp0lEQVRIS72WYVEDQQyFXxWAA3BAUQA4AAVQBzgAFIAEHAAKAAfUAQ4ABTAfs2Fye9nc3v0gM51tr5u8vOQl7Ur/YKsK413S3kLcraR15FuDXEval3QxE+hYEr6cI6tBdiW9FZCXGUCnkm4l3Ut6lTTwrUGIC4tzSSczQIwFwQF8LMx+Q0QgPOcyWfHqMUAwAxuUrgXinXpASOquMIAJ1eBMmXDhwUXfTLAChMTsNFYpSKqWgNpnkS8jACM7UxBkjMpQDPZUPrdK9+3661mlIHyJ402JiloAjcwSQv6YjcDf/VbjuexLkDXfl5aJh4kBTjLh8lGJnjXei+RL0mUtkoyJl2XGZFLuGQjOMJlaL5SLVWJgo4RaINT0WRL0e0B2yhqij90gBEZRaL7HbP2E2ztiAouPYK8R4KogIm2/1/BhAAeqsuwikGjaeUZQTgM7rGanKfnWqrdglgxNPSiZ4kNAhs03ezTpGZNIkoAiBCsT788qJqOdlYG05oMy+QTq3xq+oycM48CictFApri1q1pqa27uCIR6o/slxlCO/kxkE78EJPT5AU6KYhrsfKa5AAAAAElFTkSuQmCC">
+                        &emsp;Blender
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Cooker" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAA50lEQVRIS+2W4Q2CMBCFPzfQDdxAnUBHkA3cRNnEDXQE3UA3cAPdAPMIZ64EJMSWP3JJU+gd7/UeufYmhHYDFrU1e5VvVfNtgVNDfBA7AQ7AvgU4xnIukgKYAa8YiDWMKfA0Es2WelYFSoZvz+eWTXkcxRSDkyRQq4T8ZJKKoMT1cqUiCv7JICSx6yWvajDIRCQym3/JzGONJJ1KjnJ1SuQD/kSuNXDpJUxz8Aa4NlW8HBqxTJvVGO6AfFQdR6o7PtN9Mgd2TiqlqO5Fp2hfs+9MdmEdRWLme6g7sOzLAPi+TU1I2Wy8AcRSYIYIbBk9AAAAAElFTkSuQmCC">
+                        &emsp;Stove &amp; Oven
+                    </div>
+                </div>
+
+                <div class="row padded-row">
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Tableware" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABjUlEQVRIS+2V7U0DQQxEXzqADqADOgAqgBLoAEpICaSD0AElpAPoADqADkDvtIPMfZA7CeVXLJ1y2fV6xmOvb8UBbHUADI4gi1Sucj0DF8Bni+D/9aJocAdcAS/AJmcrSALu2qbOWTsDbhoJ31+Bd+CpkPKY/j6CnQCPLu4D0ekeOG8HDB4za4OZecgERB+VuN0HooOBHhrzKeXio59PBdyacT+TWgMZKlnYm75m0Kylfq51rHsgSr+rIEojsgFkZNCAVjADV8DUUN9L4LqADUBSKHX+Ak5LUd0L6ypbXff9o9RZ0AFI7Q43Za/5G7Zjdan79dy/glTggKT9u6bpz660YGW05D7mnL82QifxFIgXzUs3R65KIud+kZwCsfB2SWohKy/XX6ZE+tgAs0BsYx87LZbMZDtmtr/yWIdZIDplBlWgqUwE8EnBZ4N4ICNDwLEMzM49L7KZjzbOVE1+hlvTWAkM+FZScWgKLEAuakDq+UF35XsQZn15LGpm19gEyGQ2K+Xr7PiNXzIF+AYuxnUaaN6YlgAAAABJRU5ErkJggg==">
+                        &emsp;Cutlery
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Cooking-Pot" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABVklEQVRIS92VgU3DQAxFXzeADdgANoAR2gmACaATABPQEboBMAEwAbBBN4ANQC+yq1NEyUUJEcLSqYqq87O/z/aMCWw2AYM/CZkDh8Ar8FCrQm0mR8Ad8BYAvz1CBf5otZAP4BJYF97OgBWwNxRyApxGxJuIPn2awQFwH/DnXbDvMvHiVThWnqc4+tCxWRm9cmkG4klJbwAD2loJ8eItsAgZlEKHtWZwSqis1m+Z9xOiQ2Xp1LeWGABruBQi2QhMuU/kXTwDVuqVELXM4l133ezxv74Mfp5yqadUf8cyi686m7LwnzDqmNn6EyLxMVKrbc6abIVY+IVOLZDa+XzHhviM15PJlan/ak3+H8RXVrUfKp5WNnjTd2Xh7VC3ngNyqOXkbiZI+8k6yl+A8wEUeyM3Z+OmDcmh9h7jvnqPh9QXwH572O5qPpvTc9wjIzejWZQrurn+BRa7SqqPKY95AAAAAElFTkSuQmCC">
+                        &emsp;Cookware
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Fridge" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAA1klEQVRIS+2WbRHCMAyGnzlAAg5AAjgAB6AAHAAOQAE4AAcgARwgAQncyzW78jFo82PH3ZY/vW1v8yRpm7Xg2brAEdDotSswBDQ+rHjxtAQ6wNxLANbADZCvSog+lAIHzOYmQSwbRZZjWZA3cSKpoZB+KM85sUwmyypXpu9SngRZeL1H81Z/dU5qWZP2nCTtLmuQtfQu707OyqSFNKhcE2AGHLyrDoyADbCrukjovUBbQJ10EISnL9BYow4+jQGfrkTmSz+qXngY/8hMke+D9gJYYy3jugMOiEQa4cTrsAAAAABJRU5ErkJggg==">
+                        &emsp;Refrigerator
+                    </div>
+                </div>
             </div>
 
-            <button class="accordion">Bedroom</button>
+            <button class="accordion">Bedroom 1</button>
             <div class="panel">
-                <p>Lorem ipsum...</p>
-            </div>
-
-            <button class="accordion">Bathroom</button>
-            <div class="panel">
-                <p>Lorem ipsum...</p>
+                <div class="row padded-row">
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Bed" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABUUlEQVRIS+2VYVHDQBBGXxRQFIADKgEcgANwgIO2CsABOAAHIAEcgIKCgnZe5zZzDWl6oSS/uJlM/uzu++7bzaZihFONwOAf0svlsGsOzHpllgUvgHlAVsAx8FWWWxQ1AZZAlUOGGALFt0JUcAacN/R+AO/AGzBNMaeNmNcUE460Qi6Bh6xYbp+FfU6AzwQTGEdxEXMNPAOtEAfAE+828zeJHV3Ja+yEqDQs0Y5QuKuusd5YOyPPmwr7AblIVqlSb31MtEBuSxOmRQpRkH30sfgN8NJs/DdwCzwWDWh3kD25B44CogKVqqBLcV+2N9SNqdZI1JKuZvcFRLw1J0JUr01S//rozp2QfSN5KHgVkCGsqi0LiNtyqDMb1S5hflBPLYvxNzd0iK7S1NY9EeKEOQ0uyUOPy1GQn8cWpGQ5lsK3lmT0JJI3v8vSSns2cf07XwMQI1WRnWvQYQAAAABJRU5ErkJggg==">
+                        &emsp;Queen Bed
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Sliding-Door-Closet" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAsUlEQVRIS2NkoANghNrxgYGBgZ8G9oHMFYRZ8p+BgQHGJmQXNrUNUE0wGmYGWO2oJehBCwumAwwMDPZI4Q0Sp3pwgSxxQLKknhaWjEY8RrbBl09AikHxgAxIivgEBgaGBQwMDMiWGEBNC6BWZoQZjmwJekRTHPEPGBgYFNB8UgD1gQC1fIJSHqGF+2hmxFnij4yinuLMSEzqojifDB1LCDUgyJWHF5DIYYkeruQYjmIeAIlrWhq16AXNAAAAAElFTkSuQmCC">
+                        &emsp;Large Closet
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="icon icons8-Bureau" width="25" height="25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAqUlEQVRIS+2V0Q2DMAxEXzZjBFboBt0AmICO0BEYoZuBjLAUaKVyQYR84J/82D77zo4DGSxkwOAGkVjORlcLjFJporN1YgCdGKe4Nw5yJm2jgyiVyb7egVF2Rjdz3uJAnkAfcfUA3n+4K7MTWfBlPVaapCTZE1Oe8Huq3vrIwt/Tdc10Ge8VUKeovMQMwAd4/doT+8fsgJn5m4IV5/iaLk9oB+woSBNVFyb+mSyWbCwuHAAAAABJRU5ErkJggg==">
+                        &emsp;Dressers
+                    </div>
+                </div>
             </div>
         </div>
     </section>
