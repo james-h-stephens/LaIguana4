@@ -74,9 +74,6 @@
 		},
 
 
-		/**
-		 * Month rendering methods
-		 */
 		__addPreviousMonthDays: function (date, cellIndexes, dates) {
 			var firstWeekdayOfMonth = date.getDay() - 1;
 			if (firstWeekdayOfMonth < 0) firstWeekdayOfMonth = 6;
